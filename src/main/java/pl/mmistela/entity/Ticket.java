@@ -7,19 +7,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.time.LocalDate;
+import javax.persistence.OneToOne;
+import java.math.BigDecimal;
 
-@RequiredArgsConstructor
+
 @Entity
 @Data
-public class Flight {
+@RequiredArgsConstructor
+public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private City fromLocation;
-    private City toLocation;
-    private LocalDate departureTime;
-    private LocalDate arrivalTime;
-    private Integer duration;
-    private Integer totalSeats;
+    private Long id;
+    private Class airlineClass;
+    @OneToOne
+    private Customer customer;
+    private BigDecimal price;
 }

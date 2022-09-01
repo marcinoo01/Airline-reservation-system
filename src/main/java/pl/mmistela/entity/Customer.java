@@ -1,17 +1,15 @@
 package pl.mmistela.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.Data;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import java.time.LocalDate;
 
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 @Entity
 public class Customer {
     @Id
