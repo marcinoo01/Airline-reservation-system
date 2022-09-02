@@ -1,27 +1,25 @@
-package pl.mmistela.entity;
+package com.mmistela.entity;
 
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import java.time.LocalDate;
+import java.math.BigDecimal;
 
-@Data
+
 @Entity
-public class Customer {
+@Data
+@RequiredArgsConstructor
+public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String firstName;
-    private String lastName;
-    private LocalDate dateOfBirth;
-    private String email;
+    private Class airlineClass;
     @OneToOne
-    private Address address;
-    private Long phoneNumber;
-
-
+    private Customer customer;
+    private BigDecimal price;
 }

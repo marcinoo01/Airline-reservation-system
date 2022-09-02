@@ -1,4 +1,4 @@
-package pl.mmistela.entity;
+package com.mmistela.entity;
 
 public enum Class {
     VIP,
