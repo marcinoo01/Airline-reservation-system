@@ -1,0 +1,5 @@
+﻿"ticket_id","flight_id","status"
+"5","4","True"
+"3","5","True"
+"3","5","False"
+"3","5","False"

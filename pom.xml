@@ -24,6 +24,7 @@
 
         <!-- database !-->
         <posgresql.version>42.2.26</posgresql.version>
+        <liquibase.version>4.15.0</liquibase.version>
 
         <!-- binding !-->
         <javax.api.bind.version>2.2.6</javax.api.bind.version>
@@ -77,6 +78,11 @@
             <version>${posgresql.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <version>${liquibase.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
