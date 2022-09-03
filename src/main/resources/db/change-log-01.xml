@@ -24,7 +24,7 @@
             <column name="first_name" type="VARCHAR(255)"/>
             <column name="last_name" type="VARCHAR(255)"/>
             <column name="email" type="VARCHAR(255)"/>
-            <column name="day_of_birth" type="DATE"/>
+            <column name="date_of_birth" type="DATE"/>
             <column name="phone_number" type="BIGINT"/>
             <column name="address_id" type="BIGINT">
                 <constraints foreignKeyName="fk_address_id" references="address(id)"/>

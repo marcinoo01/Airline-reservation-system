@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="mmistela" id="1">
+        <loadData catalogName="csv"
+                  commentLineStartsWith="//"
+                  file="csv/addresses.csv"
+                  relativeToChangelogFile="true"
+                  tableName="address"
+                  usePreparedStatements="true">
+            <column header="town"
+                    type="VARCHAR(255)"/>
+            <column header="post_code"
+                    type="OTHER"/>
+            <column header="locality"
+                    type="VARCHAR(255)"/>
+            <column header="street"
+                    type="VARCHAR(255)"/>
+            <column header="street_number"
+                    type="OTHER"/>
+            <column header="flat_number"
+                    type="OTHER"/>
+            <column header="locality"
+                    type="VARCHAR(255)"/>
+        </loadData>
+        <loadData catalogName="csv"
+                  commentLineStartsWith="//"
+                  file="csv/customers.csv"
+                  relativeToChangelogFile="true"
+                  tableName="customer"
+                  usePreparedStatements="true">
+            <column header="first_name"
+                    type="VARCHAR(255)"/>
+            <column header="last_name"
+                    type="VARCHAR(255)"/>
+            <column header="date_of_birth"
+                    type="DATETIME"/>
+            <column header="email"
+                    type="VARCHAR(255)"/>
+            <column header="address_id"
+                    type="OTHER"/>
+            <column header="phone_number"
+                    type="OTHER"/>
+        </loadData>
+        <loadData catalogName="csv"
+                  commentLineStartsWith="//"
+                  file="csv/flights.csv"
+                  relativeToChangelogFile="true"
+                  tableName="flight"
+                  usePreparedStatements="true">
+            <column header="from_location"
+                    type="VARCHAR(255)"/>
+            <column header="to_location"
+                    type="VARCHAR(255)"/>
+            <column header="departure_time"
+                    type="OTHER"/>
+            <column header="arrival_time"
+                    type="OTHER"/>
+            <column header="duration"
+                    type="OTHER"/>
+            <column header="total_seats"
+                    type="OTHER"/>
+        </loadData>
+        <loadData catalogName="csv"
+                  commentLineStartsWith="//"
+                  file="csv/tickets.csv"
+                  relativeToChangelogFile="true"
+                  tableName="ticket"
+                  usePreparedStatements="true">
+            <column header="airline_class"
+                    type="VARCHAR(20)"/>
+            <column header="customer_id"
+                    type="OTHER"/>
+            <column header="price"
+                    type="OTHER"/>
+        </loadData>
+        <loadData catalogName="csv"
+                  commentLineStartsWith="//"
+                  file="csv/ticket-flight.csv"
+                  relativeToChangelogFile="true"
+                  tableName="ticket_flight"
+                  usePreparedStatements="true">
+        <column header="ticket_id"
+                type="OTHER"/>
+        <column header="flight_id"
+                type="OTHER"/>
+        <column header="status"
+                type="BOOLEAN"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>
