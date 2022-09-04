@@ -6,5 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class AirlineReservationSystemAppTest {
     @Test
-    public void airlineReservationSystemStart(){}
+    public void airlineReservationSystemStart() {
+    }
 }

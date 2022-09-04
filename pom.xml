@@ -16,10 +16,10 @@
 
         <!-- spring !-->
 
-        <spring.boot.starter.web.version>2.7.1</spring.boot.starter.web.version>
-        <spring.boot.starter.test.version>2.7.1</spring.boot.starter.test.version>
-        <spring.boot.starter.parent.version>2.7.1</spring.boot.starter.parent.version>
-        <spring.boot.starter.jpa.version>2.7.1</spring.boot.starter.jpa.version>
+        <spring.boot.starter.web.version>2.7.3</spring.boot.starter.web.version>
+        <spring.boot.starter.test.version>2.7.3</spring.boot.starter.test.version>
+        <spring.boot.starter.parent.version>2.7.3</spring.boot.starter.parent.version>
+        <spring.boot.starter.jpa.version>2.7.3</spring.boot.starter.jpa.version>
 
         <!-- database !-->
         <posgresql.version>42.2.26</posgresql.version>
