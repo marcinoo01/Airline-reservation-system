@@ -23,7 +23,7 @@
                     type="OTHER"/>
             <column header="flat_number"
                     type="OTHER"/>
-            <column header="locality"
+            <column header="voivodeship"
                     type="VARCHAR(255)"/>
         </loadData>
         <loadData catalogName="csv"
