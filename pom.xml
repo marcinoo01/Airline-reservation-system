@@ -9,13 +9,13 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
         <lombok.version>1.18.24</lombok.version>
 
         <!-- spring !-->
-
         <spring.boot.starter.web.version>2.7.3</spring.boot.starter.web.version>
         <spring.boot.starter.test.version>2.7.3</spring.boot.starter.test.version>
         <spring.boot.starter.parent.version>2.7.3</spring.boot.starter.parent.version>
@@ -27,9 +27,14 @@
 
         <!-- binding !-->
         <javax.api.bind.version>2.2.6</javax.api.bind.version>
+        <jackson.version>2.13.4</jackson.version>
 
         <!-- test !-->
         <maven.surfire.plugin.version>2.22.2</maven.surfire.plugin.version>
+
+        <!-- swagger !-->
+        <springfox-boot-starter.version>3.0.0</springfox-boot-starter.version>
+
     </properties>
 
 
@@ -65,7 +70,11 @@
             <artifactId>jaxb-api</artifactId>
             <version>${javax.api.bind.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
         <!-- database !-->
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -77,6 +86,12 @@
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
             <version>${liquibase.version}</version>
+        </dependency>
+        <!-- swagger !-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>${springfox-boot-starter.version}</version>
         </dependency>
     </dependencies>
     <build>
