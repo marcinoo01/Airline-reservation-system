@@ -1,13 +1,6 @@
 package com.mmistela.entity;
 
-import org.springframework.security.core.GrantedAuthority;
-
-public enum Role implements GrantedAuthority {
+public enum Role {
     ADMIN,
     CLIENT;
-
-    @Override
-    public String getAuthority() {
-        return null;
-    }
 }

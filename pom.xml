@@ -20,6 +20,7 @@
         <spring.boot.starter.test.version>2.7.3</spring.boot.starter.test.version>
         <spring.boot.starter.parent.version>2.7.3</spring.boot.starter.parent.version>
         <spring.boot.starter.jpa.version>2.7.3</spring.boot.starter.jpa.version>
+        <spring.boot.starter.security.version>2.7.3</spring.boot.starter.security.version>
 
         <!-- database !-->
         <posgresql.version>42.2.26</posgresql.version>
@@ -35,6 +36,9 @@
         <!-- swagger !-->
         <springfox-boot-starter.version>3.0.0</springfox-boot-starter.version>
 
+        <!-- jjwt !-->
+        <jjwt.version>0.11.5</jjwt.version>
+
     </properties>
 
 
@@ -46,6 +50,7 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- spring !-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -63,6 +68,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>${spring.boot.starter.jpa.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>${spring.boot.starter.security.version}</version>
         </dependency>
         <!-- binding !-->
         <dependency>
@@ -92,6 +102,12 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-boot-starter</artifactId>
             <version>${springfox-boot-starter.version}</version>
+        </dependency>
+        <!-- jjwt !-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>${jjwt.version}</version>
         </dependency>
     </dependencies>
     <build>
