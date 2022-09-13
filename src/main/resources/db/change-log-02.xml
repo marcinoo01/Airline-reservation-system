@@ -28,6 +28,17 @@
         </loadData>
         <loadData catalogName="csv"
                   commentLineStartsWith="//"
+                  file="csv/users.csv"
+                  relativeToChangelogFile="true"
+                  tableName="app_user"
+                  usePreparedStatements="true">
+            <column header="username"
+                    type="VARCHAR(255"/>
+            <column header="password"
+                    type="varchar"/>
+        </loadData>
+        <loadData catalogName="csv"
+                  commentLineStartsWith="//"
                   file="csv/customers.csv"
                   relativeToChangelogFile="true"
                   tableName="customer"
@@ -83,12 +94,12 @@
                   relativeToChangelogFile="true"
                   tableName="ticket_flight"
                   usePreparedStatements="true">
-        <column header="ticket_id"
-                type="OTHER"/>
-        <column header="flight_id"
-                type="OTHER"/>
-        <column header="status"
-                type="BOOLEAN"/>
+            <column header="ticket_id"
+                    type="OTHER"/>
+            <column header="flight_id"
+                    type="OTHER"/>
+            <column header="status"
+                    type="BOOLEAN"/>
         </loadData>
     </changeSet>
 </databaseChangeLog>

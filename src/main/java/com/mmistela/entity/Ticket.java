@@ -1,20 +1,17 @@
 package com.mmistela.entity;
 
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
+import org.hibernate.Hibernate;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Objects;
 
 
 @Entity
-@Data
+@Getter
+@Setter
+@ToString
 @RequiredArgsConstructor
 public class Ticket {
     @Id
@@ -25,4 +22,17 @@ public class Ticket {
     @OneToOne
     private Customer customer;
     private BigDecimal price;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Ticket ticket = (Ticket) o;
+        return id != null && Objects.equals(id, ticket.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }
